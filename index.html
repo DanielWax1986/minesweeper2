@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Sweeper-Daniel Waxenbaum</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body oncontextmenu="return false" onload="initGame()">
+    <div class="banner">
+        <h1 on>Mine Sweeper</h1>
+        <button onclick="choseLevel(4,2)">Beginnr</button>
+        <button onclick="choseLevel(8,14)">Medium</button>
+        <button onclick="choseLevel(12,32)">Expert</button><br>
+        <button onclick="userFace(event,this)" class="emoji">🙂</button>
+    </div>
+    <div class="left-side-bar">
+        <h2>Lives: <br><span class="lives"> 💙 💙  </span><br>         
+            Mines left: <br><span class="mines">2</span><br>
+            best player: <br><span class="player">Daniel</span><br> best time: <br><span class="time">180</span>sec</h2>
+        <p>Time:</p>
+        <table class="clock">
+            <tr>
+                <td class="seconds">00</td>
+                <td class="fx">:</td>
+                <td class="tens">00</td>
+            </tr>
+        </table>
+    </div>
+    <div class="main-content">
+
+    </div>
+    <div class="right-side-bar">
+        <p>Bonus:</p>
+        <button id="myBtn" class="hints">💡  💡  💡 </button><br><br>
+        <button class="safeBtn btn" onclick="safeClick(this)">safe click</button><br>
+        <button class="" onclick="undo(this)">UNDO</button><br>
+        <button class="" onclick="manually(this)">manually create</button>
+    </div>
+    <div class="footer">
+
+    </div>
+    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>This is a hint! <br> Don't be tempted to use it so easely! <br> if you realy need it press 'use hint'..
+        with the hint you can chose a cell and you will see for 1 second the cell and his neighbors </p>
+          <button class="hint" onclick="useHint()">Use hint</button>
+        </div>
+    </div>
+    <script src="js/game.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>
