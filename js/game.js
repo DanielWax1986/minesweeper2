@@ -383,7 +383,7 @@ function safeClick(el){
         var j = getRandomInt(0,gBoard.length)
         var elCell = document.querySelector(`.cell-${i}-${j}`)
         elCell.classList.add('safe')
-        elCell.innerText = '🦺'
+        elCell.innerText = '💪'
         gGame.safeClickLeft--
     } else{
         if (gGame.shownCount === gLevel.SIZE**2 - gLevel.MINES){
